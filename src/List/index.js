@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 
 export default function List(props) {
+  const [likes, setLikes] = useState(props.data.likeada);
+
   function carregaIcone(likeada) {
     return likeada ? require('../img/likeada.png') : require('../img/like.png');
   }
@@ -32,11 +34,13 @@ export default function List(props) {
       />
 
       <View style={styles.areaBtn}>
-        <TouchableOpacity>
-          <Image
-            source={carregaIcone(props.data.likeada)}
-            style={styles.iconeLike}
-          />
+        <TouchableOpacity
+          onPress={() => {
+            props.data.likeada
+              ? setLikes((props.data.likeada = false))
+              : setLikes((props.data.likeada = true));
+          }}>
+          <Image source={carregaIcone(likes)} style={styles.iconeLike} />
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.btnSend}>
