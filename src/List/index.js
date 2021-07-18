@@ -68,36 +68,41 @@ const styles = StyleSheet.create({
     padding: 8,
   },
   fotoPerfil: {
-    width: 50,
-    height: 50,
-    borderRadius: 25,
+    width: 40,
+    height: 40,
+    borderRadius: 20,
   },
   nomeUsuario: {
     paddingLeft: 5,
-    fontSize: 22,
+    fontSize: 18,
+    fontWeight: 'bold',
     color: '#000',
   },
   fotoPublicacao: {
     height: 400,
     alignItems: 'center',
+    marginLeft: 3,
+    marginRight: 3,
   },
   areaBtn: {
     flexDirection: 'row',
-    padding: 5,
+    padding: 8,
+    paddingLeft: 10,
   },
   iconeLike: {
     width: 25,
     height: 25,
   },
   btnSend: {
-    paddingLeft: 5,
+    paddingLeft: 15,
   },
   likes: {
     fontWeight: 'bold',
-    marginLeft: 5,
+    marginLeft: 10,
   },
   rodape: {
-    marginLeft: 5,
+    marginLeft: 10,
+    marginBottom: 10,
   },
   nomeRodape: {
     fontSize: 14,
